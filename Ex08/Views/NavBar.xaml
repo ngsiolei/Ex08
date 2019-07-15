@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="Ex08.Views.NavBar"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <Grid ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Button Command="{Binding GoBackCommand}"
+                    Grid.Column="0"
+                    HorizontalOptions="Start"
+                    Text="Back"
+                    VerticalOptions="Center"
+                    WidthRequest="100" />
+            <Label FontAttributes="Bold"
+                   FontSize="20"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   Text="{Binding Title}"
+                   VerticalOptions="Center" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>
